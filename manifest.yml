@@ -1,0 +1,22 @@
+---
+language: hwc-cors
+default_versions:
+dependency_deprecation_dates:
+dependencies:
+- name: cors-msi
+  uri: "http://download.microsoft.com/download/2/F/2/2F259559-FC43-4B2C-B53F-DED3E9950912/IISCORS_amd64.msi#.sh"
+  version: "1.0"
+  sha256: "b0830ab0b33d813777adae4e367f3bd7f6fd8e7be839e939dca79ffe9e4d792b"
+  cf_stacks:
+  - windows2016
+
+include_files:
+  - README.md
+  - VERSION
+  - bin/detect
+  - bin/compile
+  - bin/supply.exe
+  - bin/finalize.exe
+  - bin/release
+  - manifest.yml
+pre_package: scripts/build.sh
